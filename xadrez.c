@@ -32,6 +32,18 @@ int main(){
         r++;
     } while (r < 8);
 
+    printf("----------------------------------\n");
+
+     printf("Cavalo:\n");
+    int movimento = 1; // Para controlar o movimento em L
+
+    for (; movimento > 0; movimento--){
+        for(int i = 0; i < 2; i++){ 
+            printf("Baixo\n"); // Imprime 'Baixo' duas vezes
+        }
+        printf("Esquerda\n"); // Imprime 'Esquerda' uma vez
+    }
+
     return 0;
     
 
