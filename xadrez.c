@@ -8,13 +8,11 @@ void moverTorre(int movimentos) {
     }
 }
 
-// Função recursiva para mover o Bispo (com loops aninhados)
-void moverBispo(int movimentos, int passo) {
+// Função recursiva para mover o Bispo 
+void moverBispo(int movimentos, int x, int y) {
     if (movimentos > 0) {
-        for (int i = 0; i < passo; i++) { 
-            printf("Cima, Direita\n");
-        }
-        moverBispo(movimentos - 1, passo);
+        printf("Cima, Direita\n");
+        moverBispo(movimentos - 1, x + 1, y + 1);
     }
 }
 
@@ -39,7 +37,7 @@ int main() {
     printf("\n----------------------------------\n");
 
     printf("Bispo:\n");
-    moverBispo(5, 1);
+    moverBispo(5, 0, 0);
     printf("\n----------------------------------\n");
 
     printf("Rainha:\n");
@@ -47,8 +45,7 @@ int main() {
     printf("\n----------------------------------\n");
 
     printf("Cavalo:\n");
-    moverCavalo(); 
+    moverCavalo(); // Apenas um movimento em "L"
 
     return 0;
 }
-
